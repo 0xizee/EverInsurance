@@ -1,0 +1,552 @@
+{
+  "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_priceFeed",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "prod1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "denominator",
+          "type": "uint256"
+        }
+      ],
+      "name": "PRBMath__MulDivOverflow",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WrongWorthOfEth",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "string",
+          "name": "product",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "howOld",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "idv",
+          "type": "uint256"
+        }
+      ],
+      "name": "InsuranedYourProduct",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_counter",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReInsurance",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "addOns_engineCover",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "addOns_keyLoss",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "addOns_zeroDeprication",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "five",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "ex_show_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCalculc",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "getConversion",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_product",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_ex_ShowRoomPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_howOldInMonths",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_zeroDeprication",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "_engineCover",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "_lostkey",
+          "type": "bool"
+        }
+      ],
+      "name": "getInsurance",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "usdtoWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUSDtoWEI",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "insurances",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "products",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "ex_ShowRoomPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "idv",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "howOld",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "whatInsuranceisThis",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address payable",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isclaimed",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "zeroDeprication",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "engineCover",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "keyLoss",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "insuranceID",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalAmountPaid",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "priceFeed",
+      "outputs": [
+        {
+          "internalType": "contract AggregatorV3Interface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "s_MIN_USD",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xb6d7516554b61f84ef96d28732b661d2166257cbc35e5a0b3c74762d17dd00c2",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "transactionIndex": 0,
+    "gasUsed": "1456762",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xc136cb7391ebe4d59428cf8db962eadac5a8571cd0a71ac068e44161462f122b",
+    "transactionHash": "0xb6d7516554b61f84ef96d28732b661d2166257cbc35e5a0b3c74762d17dd00c2",
+    "logs": [],
+    "blockNumber": 2,
+    "cumulativeGasUsed": "1456762",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "bc20714949c77f177da58d4b5a4b6f42",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_priceFeed\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"prod1\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"denominator\",\"type\":\"uint256\"}],\"name\":\"PRBMath__MulDivOverflow\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"WrongWorthOfEth\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"string\",\"name\":\"product\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"howOld\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"idv\",\"type\":\"uint256\"}],\"name\":\"InsuranedYourProduct\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_counter\",\"type\":\"uint256\"}],\"name\":\"ReInsurance\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"addOns_engineCover\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"addOns_keyLoss\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"addOns_zeroDeprication\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"five\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"ex_show_price\",\"type\":\"uint256\"}],\"name\":\"getCalculc\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"getConversion\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_product\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_ex_ShowRoomPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_howOldInMonths\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_zeroDeprication\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"_engineCover\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"_lostkey\",\"type\":\"bool\"}],\"name\":\"getInsurance\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"usdtoWei\",\"type\":\"uint256\"}],\"name\":\"getUSDtoWEI\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"insurances\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"products\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"ex_ShowRoomPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"idv\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"howOld\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"whatInsuranceisThis\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"isclaimed\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"zeroDeprication\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"engineCover\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"keyLoss\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"insuranceID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalAmountPaid\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceFeed\",\"outputs\":[{\"internalType\":\"contract AggregatorV3Interface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"s_MIN_USD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"errors\":{\"PRBMath__MulDivOverflow(uint256,uint256)\":[{\"notice\":\"Emitted when the result overflows uint256.\"}]},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/EverInsurance.sol\":\"EverInsurance\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface AggregatorV3Interface {\\n  function decimals() external view returns (uint8);\\n\\n  function description() external view returns (string memory);\\n\\n  function version() external view returns (uint256);\\n\\n  // getRoundData and latestRoundData should both raise \\\"No data present\\\"\\n  // if they do not have data to report, instead of returning unset values\\n  // which could be misinterpreted as actual reported values.\\n  function getRoundData(uint80 _roundId)\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n\\n  function latestRoundData()\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n}\\n\",\"keccak256\":\"0xf2b6c9adb3552254df1445b73563cf014434ff5e78663e9b961b6c059506ceb5\",\"license\":\"MIT\"},\"contracts/Calculation.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"prb-math/contracts/PRBMathUD60x18.sol\\\";\\r\\n// import \\\"./ConversionRate.sol\\\";\\r\\n\\r\\ncontract Calculation {\\r\\nusing PRBMathUD60x18 for uint256;\\r\\nuint256 internal constant SCALE = 1e18;\\r\\n    function getCalculc(uint five , uint ex_show_price) public pure returns(uint256)\\r\\n    {\\r\\n          uint amount = five * ex_show_price;\\r\\n          uint number = amount / 100;\\r\\n          return (ex_show_price - number);\\r\\n    }\\r\\n}\",\"keccak256\":\"0x452a1aa9e9c6b671475502bb510f72d57059aeb95313fb192f4bc0791e636ae3\",\"license\":\"MIT\"},\"contracts/ConversionRate.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.4;\\r\\n\\r\\nimport \\\"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\\\";\\r\\n\\r\\ncontract ConversionRate {\\r\\n    AggregatorV3Interface public priceFeed;\\r\\n    uint MinUsd = 100 * 10 * 18;\\r\\n    constructor(address _priceFeed) {\\r\\n        priceFeed = AggregatorV3Interface(_priceFeed);\\r\\n    }\\r\\n    function getPrice() public view returns (uint256) {\\r\\n        (, int answer, , , ) = priceFeed.latestRoundData();\\r\\n        return uint256(answer * 10000000000);\\r\\n    }\\r\\n    function getConversion(uint amount) public view returns (uint) {\\r\\n        uint eth = getPrice();\\r\\n        uint ethAmount = (eth * amount) / 1000000000000000000;\\r\\n        return ethAmount;\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0x6d61a7cae9a989f90d5b8c9c07019acdeb55b0f87fefe20439610682e8241deb\",\"license\":\"MIT\"},\"contracts/EverInsurance.sol\":{\"content\":\"//We will provide insurance for only (Physical assets)\\r\\n/* For now we will only provide vehicle insurance car */\\r\\n\\r\\n// comprehensive insurnce.\\r\\n// Fucntion for getting the insurance\\r\\n//Paid premium\\r\\n// Calculated the idv\\r\\n\\r\\n//Create is they are going to have a add on;\\r\\n//Re insurance\\r\\n//0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e\\r\\n// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.4;\\r\\nimport \\\"./ConversionRate.sol\\\";\\r\\nimport \\\"./Calculation.sol\\\";\\r\\n\\r\\nerror WrongWorthOfEth(uint256 amount);\\r\\n\\r\\ncontract EverInsurance is ConversionRate, Calculation {\\r\\n  uint256 public constant s_MIN_USD = 100 * 10**18;\\r\\n  uint256 public constant addOns_zeroDeprication = 30 * 10**18;\\r\\n  uint256 public constant addOns_engineCover = 20 * 10**18;\\r\\n  uint256 public constant addOns_keyLoss = 20 * 10**18;\\r\\n  uint256 counter;\\r\\n\\r\\n  struct insurance {\\r\\n    string products;\\r\\n    uint256 ex_ShowRoomPrice;\\r\\n    uint256 idv;\\r\\n    uint256 howOld;\\r\\n    uint256 whatInsuranceisThis;\\r\\n    address payable owner;\\r\\n    bool isclaimed;\\r\\n    bool zeroDeprication;\\r\\n    bool engineCover;\\r\\n    bool keyLoss;\\r\\n    uint256 insuranceID;\\r\\n    uint256 totalAmountPaid;\\r\\n  }\\r\\n\\r\\n  insurance[] public insurances;\\r\\n\\r\\n  event InsuranedYourProduct(\\r\\n    address owner,\\r\\n    string indexed product,\\r\\n    uint256 indexed howOld,\\r\\n    uint256 indexed idv\\r\\n  );\\r\\n\\r\\n  constructor(address _priceFeed) ConversionRate(_priceFeed) {}\\r\\n\\r\\n  function getInsurance(\\r\\n    string memory _product,\\r\\n    uint256 _ex_ShowRoomPrice,\\r\\n    uint256 _howOldInMonths,\\r\\n    bool _zeroDeprication,\\r\\n    bool _engineCover,\\r\\n    bool _lostkey\\r\\n  ) public payable {\\r\\n    uint256 totalAmount = s_MIN_USD;\\r\\n\\r\\n    if (_zeroDeprication) {\\r\\n      totalAmount = totalAmount + addOns_zeroDeprication;\\r\\n    }\\r\\n    if (_engineCover) {\\r\\n      totalAmount = totalAmount + addOns_engineCover;\\r\\n    }\\r\\n    if (_lostkey) {\\r\\n      totalAmount = totalAmount + addOns_keyLoss;\\r\\n    }\\r\\n    uint256 amount = calculateIdv(_howOldInMonths, _ex_ShowRoomPrice);\\r\\n    if (getConversion(msg.value) <= totalAmount)\\r\\n      revert WrongWorthOfEth(msg.value);\\r\\n    insurance memory newInsurance = insurance({\\r\\n      products: _product,\\r\\n      ex_ShowRoomPrice: _ex_ShowRoomPrice,\\r\\n      idv: amount,\\r\\n      howOld: _howOldInMonths,\\r\\n      whatInsuranceisThis: 1,\\r\\n      owner: payable(msg.sender),\\r\\n      isclaimed: false,\\r\\n      zeroDeprication: _zeroDeprication,\\r\\n      engineCover: _engineCover,\\r\\n      keyLoss: _lostkey,\\r\\n      insuranceID: counter,\\r\\n      totalAmountPaid: msg.value\\r\\n    });\\r\\n    insurances.push(newInsurance);\\r\\n    counter += 1;\\r\\n    emit InsuranedYourProduct(msg.sender, _product, _howOldInMonths, amount);\\r\\n  }\\r\\n  function ReInsurance(uint256 _counter) public payable {\\r\\n    insurance storage insurancesss = insurances[_counter];\\r\\n    require(msg.sender == insurancesss.owner, \\\"You are not Owner\\\");\\r\\n    uint256 newamount;\\r\\n    if (!insurancesss.isclaimed) {\\r\\n      if (\\r\\n        insurancesss.whatInsuranceisThis <= 3 &&\\r\\n        insurancesss.whatInsuranceisThis > 0\\r\\n      ) {\\r\\n        newamount = getCalculc(10, insurancesss.totalAmountPaid);\\r\\n      } else if (\\r\\n        insurancesss.whatInsuranceisThis <= 3 &&\\r\\n        insurancesss.whatInsuranceisThis > 5\\r\\n      ) {\\r\\n        newamount = getCalculc(20, insurancesss.totalAmountPaid);\\r\\n      } else {\\r\\n        newamount = getCalculc(40, insurancesss.totalAmountPaid);\\r\\n      }\\r\\n    } else {\\r\\n      newamount = insurancesss.totalAmountPaid;\\r\\n    }\\r\\n    require(msg.value >= newamount, \\\"o\\\");\\r\\n    uint256 number = insurancesss.howOld + 12;\\r\\n    insurancesss.idv = calculateIdv(number, insurancesss.ex_ShowRoomPrice);\\r\\n    insurancesss.howOld = number;\\r\\n    insurancesss.whatInsuranceisThis = insurancesss.whatInsuranceisThis + 1;\\r\\n    insurancesss.totalAmountPaid = insurancesss.totalAmountPaid + msg.value;\\r\\n  }\\r\\n\\r\\n  function calculateIdv(uint256 months, uint256 price)\\r\\n    internal\\r\\n    pure\\r\\n    returns (uint256)\\r\\n  {\\r\\n    if (months <= 6 && months >= 0) {\\r\\n      return getCalculc(5, price);\\r\\n    } else if (months <= 12 && months >= 6) {\\r\\n      return getCalculc(15, price);\\r\\n    } else if (months <= 24 && months >= 12) {\\r\\n      return getCalculc(20, price);\\r\\n    } else if (months <= 36 && months >= 24) {\\r\\n      return getCalculc(30, price);\\r\\n    } else if (months <= 48 && months >= 36) {\\r\\n      return getCalculc(40, price);\\r\\n    } else {\\r\\n      return getCalculc(50, price);\\r\\n    }\\r\\n  }\\r\\n\\r\\n  function getUSDtoWEI(uint256 usdtoWei) public view returns (uint256) {\\r\\n    uint256 priceOfEth = getConversion(1);\\r\\n    uint256 oneWei = PRBMath.mulDiv(1e18, SCALE, priceOfEth);\\r\\n    uint256 weiPrice = oneWei / 10**18;\\r\\n    return weiPrice * usdtoWei;\\r\\n  }\\r\\n}\\r\\n\",\"keccak256\":\"0x24d969e836ac55a335d7d87bf2d892f7fce211af931486189f71f650a686f380\",\"license\":\"MIT\"},\"prb-math/contracts/PRBMath.sol\":{\"content\":\"// SPDX-License-Identifier: Unlicense\\npragma solidity >=0.8.4;\\n\\n/// @notice Emitted when the result overflows uint256.\\nerror PRBMath__MulDivFixedPointOverflow(uint256 prod1);\\n\\n/// @notice Emitted when the result overflows uint256.\\nerror PRBMath__MulDivOverflow(uint256 prod1, uint256 denominator);\\n\\n/// @notice Emitted when one of the inputs is type(int256).min.\\nerror PRBMath__MulDivSignedInputTooSmall();\\n\\n/// @notice Emitted when the intermediary absolute result overflows int256.\\nerror PRBMath__MulDivSignedOverflow(uint256 rAbs);\\n\\n/// @notice Emitted when the input is MIN_SD59x18.\\nerror PRBMathSD59x18__AbsInputTooSmall();\\n\\n/// @notice Emitted when ceiling a number overflows SD59x18.\\nerror PRBMathSD59x18__CeilOverflow(int256 x);\\n\\n/// @notice Emitted when one of the inputs is MIN_SD59x18.\\nerror PRBMathSD59x18__DivInputTooSmall();\\n\\n/// @notice Emitted when one of the intermediary unsigned results overflows SD59x18.\\nerror PRBMathSD59x18__DivOverflow(uint256 rAbs);\\n\\n/// @notice Emitted when the input is greater than 133.084258667509499441.\\nerror PRBMathSD59x18__ExpInputTooBig(int256 x);\\n\\n/// @notice Emitted when the input is greater than 192.\\nerror PRBMathSD59x18__Exp2InputTooBig(int256 x);\\n\\n/// @notice Emitted when flooring a number underflows SD59x18.\\nerror PRBMathSD59x18__FloorUnderflow(int256 x);\\n\\n/// @notice Emitted when converting a basic integer to the fixed-point format overflows SD59x18.\\nerror PRBMathSD59x18__FromIntOverflow(int256 x);\\n\\n/// @notice Emitted when converting a basic integer to the fixed-point format underflows SD59x18.\\nerror PRBMathSD59x18__FromIntUnderflow(int256 x);\\n\\n/// @notice Emitted when the product of the inputs is negative.\\nerror PRBMathSD59x18__GmNegativeProduct(int256 x, int256 y);\\n\\n/// @notice Emitted when multiplying the inputs overflows SD59x18.\\nerror PRBMathSD59x18__GmOverflow(int256 x, int256 y);\\n\\n/// @notice Emitted when the input is less than or equal to zero.\\nerror PRBMathSD59x18__LogInputTooSmall(int256 x);\\n\\n/// @notice Emitted when one of the inputs is MIN_SD59x18.\\nerror PRBMathSD59x18__MulInputTooSmall();\\n\\n/// @notice Emitted when the intermediary absolute result overflows SD59x18.\\nerror PRBMathSD59x18__MulOverflow(uint256 rAbs);\\n\\n/// @notice Emitted when the intermediary absolute result overflows SD59x18.\\nerror PRBMathSD59x18__PowuOverflow(uint256 rAbs);\\n\\n/// @notice Emitted when the input is negative.\\nerror PRBMathSD59x18__SqrtNegativeInput(int256 x);\\n\\n/// @notice Emitted when the calculating the square root overflows SD59x18.\\nerror PRBMathSD59x18__SqrtOverflow(int256 x);\\n\\n/// @notice Emitted when addition overflows UD60x18.\\nerror PRBMathUD60x18__AddOverflow(uint256 x, uint256 y);\\n\\n/// @notice Emitted when ceiling a number overflows UD60x18.\\nerror PRBMathUD60x18__CeilOverflow(uint256 x);\\n\\n/// @notice Emitted when the input is greater than 133.084258667509499441.\\nerror PRBMathUD60x18__ExpInputTooBig(uint256 x);\\n\\n/// @notice Emitted when the input is greater than 192.\\nerror PRBMathUD60x18__Exp2InputTooBig(uint256 x);\\n\\n/// @notice Emitted when converting a basic integer to the fixed-point format format overflows UD60x18.\\nerror PRBMathUD60x18__FromUintOverflow(uint256 x);\\n\\n/// @notice Emitted when multiplying the inputs overflows UD60x18.\\nerror PRBMathUD60x18__GmOverflow(uint256 x, uint256 y);\\n\\n/// @notice Emitted when the input is less than 1.\\nerror PRBMathUD60x18__LogInputTooSmall(uint256 x);\\n\\n/// @notice Emitted when the calculating the square root overflows UD60x18.\\nerror PRBMathUD60x18__SqrtOverflow(uint256 x);\\n\\n/// @notice Emitted when subtraction underflows UD60x18.\\nerror PRBMathUD60x18__SubUnderflow(uint256 x, uint256 y);\\n\\n/// @dev Common mathematical functions used in both PRBMathSD59x18 and PRBMathUD60x18. Note that this shared library\\n/// does not always assume the signed 59.18-decimal fixed-point or the unsigned 60.18-decimal fixed-point\\n/// representation. When it does not, it is explicitly mentioned in the NatSpec documentation.\\nlibrary PRBMath {\\n    /// STRUCTS ///\\n\\n    struct SD59x18 {\\n        int256 value;\\n    }\\n\\n    struct UD60x18 {\\n        uint256 value;\\n    }\\n\\n    /// STORAGE ///\\n\\n    /// @dev How many trailing decimals can be represented.\\n    uint256 internal constant SCALE = 1e18;\\n\\n    /// @dev Largest power of two divisor of SCALE.\\n    uint256 internal constant SCALE_LPOTD = 262144;\\n\\n    /// @dev SCALE inverted mod 2^256.\\n    uint256 internal constant SCALE_INVERSE =\\n        78156646155174841979727994598816262306175212592076161876661_508869554232690281;\\n\\n    /// FUNCTIONS ///\\n\\n    /// @notice Calculates the binary exponent of x using the binary fraction method.\\n    /// @dev Has to use 192.64-bit fixed-point numbers.\\n    /// See https://ethereum.stackexchange.com/a/96594/24693.\\n    /// @param x The exponent as an unsigned 192.64-bit fixed-point number.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point number.\\n    function exp2(uint256 x) internal pure returns (uint256 result) {\\n        unchecked {\\n            // Start from 0.5 in the 192.64-bit fixed-point format.\\n            result = 0x800000000000000000000000000000000000000000000000;\\n\\n            // Multiply the result by root(2, 2^-i) when the bit at position i is 1. None of the intermediary results overflows\\n            // because the initial result is 2^191 and all magic factors are less than 2^65.\\n            if (x & 0x8000000000000000 > 0) {\\n                result = (result * 0x16A09E667F3BCC909) >> 64;\\n            }\\n            if (x & 0x4000000000000000 > 0) {\\n                result = (result * 0x1306FE0A31B7152DF) >> 64;\\n            }\\n            if (x & 0x2000000000000000 > 0) {\\n                result = (result * 0x1172B83C7D517ADCE) >> 64;\\n            }\\n            if (x & 0x1000000000000000 > 0) {\\n                result = (result * 0x10B5586CF9890F62A) >> 64;\\n            }\\n            if (x & 0x800000000000000 > 0) {\\n                result = (result * 0x1059B0D31585743AE) >> 64;\\n            }\\n            if (x & 0x400000000000000 > 0) {\\n                result = (result * 0x102C9A3E778060EE7) >> 64;\\n            }\\n            if (x & 0x200000000000000 > 0) {\\n                result = (result * 0x10163DA9FB33356D8) >> 64;\\n            }\\n            if (x & 0x100000000000000 > 0) {\\n                result = (result * 0x100B1AFA5ABCBED61) >> 64;\\n            }\\n            if (x & 0x80000000000000 > 0) {\\n                result = (result * 0x10058C86DA1C09EA2) >> 64;\\n            }\\n            if (x & 0x40000000000000 > 0) {\\n                result = (result * 0x1002C605E2E8CEC50) >> 64;\\n            }\\n            if (x & 0x20000000000000 > 0) {\\n                result = (result * 0x100162F3904051FA1) >> 64;\\n            }\\n            if (x & 0x10000000000000 > 0) {\\n                result = (result * 0x1000B175EFFDC76BA) >> 64;\\n            }\\n            if (x & 0x8000000000000 > 0) {\\n                result = (result * 0x100058BA01FB9F96D) >> 64;\\n            }\\n            if (x & 0x4000000000000 > 0) {\\n                result = (result * 0x10002C5CC37DA9492) >> 64;\\n            }\\n            if (x & 0x2000000000000 > 0) {\\n                result = (result * 0x1000162E525EE0547) >> 64;\\n            }\\n            if (x & 0x1000000000000 > 0) {\\n                result = (result * 0x10000B17255775C04) >> 64;\\n            }\\n            if (x & 0x800000000000 > 0) {\\n                result = (result * 0x1000058B91B5BC9AE) >> 64;\\n            }\\n            if (x & 0x400000000000 > 0) {\\n                result = (result * 0x100002C5C89D5EC6D) >> 64;\\n            }\\n            if (x & 0x200000000000 > 0) {\\n                result = (result * 0x10000162E43F4F831) >> 64;\\n            }\\n            if (x & 0x100000000000 > 0) {\\n                result = (result * 0x100000B1721BCFC9A) >> 64;\\n            }\\n            if (x & 0x80000000000 > 0) {\\n                result = (result * 0x10000058B90CF1E6E) >> 64;\\n            }\\n            if (x & 0x40000000000 > 0) {\\n                result = (result * 0x1000002C5C863B73F) >> 64;\\n            }\\n            if (x & 0x20000000000 > 0) {\\n                result = (result * 0x100000162E430E5A2) >> 64;\\n            }\\n            if (x & 0x10000000000 > 0) {\\n                result = (result * 0x1000000B172183551) >> 64;\\n            }\\n            if (x & 0x8000000000 > 0) {\\n                result = (result * 0x100000058B90C0B49) >> 64;\\n            }\\n            if (x & 0x4000000000 > 0) {\\n                result = (result * 0x10000002C5C8601CC) >> 64;\\n            }\\n            if (x & 0x2000000000 > 0) {\\n                result = (result * 0x1000000162E42FFF0) >> 64;\\n            }\\n            if (x & 0x1000000000 > 0) {\\n                result = (result * 0x10000000B17217FBB) >> 64;\\n            }\\n            if (x & 0x800000000 > 0) {\\n                result = (result * 0x1000000058B90BFCE) >> 64;\\n            }\\n            if (x & 0x400000000 > 0) {\\n                result = (result * 0x100000002C5C85FE3) >> 64;\\n            }\\n            if (x & 0x200000000 > 0) {\\n                result = (result * 0x10000000162E42FF1) >> 64;\\n            }\\n            if (x & 0x100000000 > 0) {\\n                result = (result * 0x100000000B17217F8) >> 64;\\n            }\\n            if (x & 0x80000000 > 0) {\\n                result = (result * 0x10000000058B90BFC) >> 64;\\n            }\\n            if (x & 0x40000000 > 0) {\\n                result = (result * 0x1000000002C5C85FE) >> 64;\\n            }\\n            if (x & 0x20000000 > 0) {\\n                result = (result * 0x100000000162E42FF) >> 64;\\n            }\\n            if (x & 0x10000000 > 0) {\\n                result = (result * 0x1000000000B17217F) >> 64;\\n            }\\n            if (x & 0x8000000 > 0) {\\n                result = (result * 0x100000000058B90C0) >> 64;\\n            }\\n            if (x & 0x4000000 > 0) {\\n                result = (result * 0x10000000002C5C860) >> 64;\\n            }\\n            if (x & 0x2000000 > 0) {\\n                result = (result * 0x1000000000162E430) >> 64;\\n            }\\n            if (x & 0x1000000 > 0) {\\n                result = (result * 0x10000000000B17218) >> 64;\\n            }\\n            if (x & 0x800000 > 0) {\\n                result = (result * 0x1000000000058B90C) >> 64;\\n            }\\n            if (x & 0x400000 > 0) {\\n                result = (result * 0x100000000002C5C86) >> 64;\\n            }\\n            if (x & 0x200000 > 0) {\\n                result = (result * 0x10000000000162E43) >> 64;\\n            }\\n            if (x & 0x100000 > 0) {\\n                result = (result * 0x100000000000B1721) >> 64;\\n            }\\n            if (x & 0x80000 > 0) {\\n                result = (result * 0x10000000000058B91) >> 64;\\n            }\\n            if (x & 0x40000 > 0) {\\n                result = (result * 0x1000000000002C5C8) >> 64;\\n            }\\n            if (x & 0x20000 > 0) {\\n                result = (result * 0x100000000000162E4) >> 64;\\n            }\\n            if (x & 0x10000 > 0) {\\n                result = (result * 0x1000000000000B172) >> 64;\\n            }\\n            if (x & 0x8000 > 0) {\\n                result = (result * 0x100000000000058B9) >> 64;\\n            }\\n            if (x & 0x4000 > 0) {\\n                result = (result * 0x10000000000002C5D) >> 64;\\n            }\\n            if (x & 0x2000 > 0) {\\n                result = (result * 0x1000000000000162E) >> 64;\\n            }\\n            if (x & 0x1000 > 0) {\\n                result = (result * 0x10000000000000B17) >> 64;\\n            }\\n            if (x & 0x800 > 0) {\\n                result = (result * 0x1000000000000058C) >> 64;\\n            }\\n            if (x & 0x400 > 0) {\\n                result = (result * 0x100000000000002C6) >> 64;\\n            }\\n            if (x & 0x200 > 0) {\\n                result = (result * 0x10000000000000163) >> 64;\\n            }\\n            if (x & 0x100 > 0) {\\n                result = (result * 0x100000000000000B1) >> 64;\\n            }\\n            if (x & 0x80 > 0) {\\n                result = (result * 0x10000000000000059) >> 64;\\n            }\\n            if (x & 0x40 > 0) {\\n                result = (result * 0x1000000000000002C) >> 64;\\n            }\\n            if (x & 0x20 > 0) {\\n                result = (result * 0x10000000000000016) >> 64;\\n            }\\n            if (x & 0x10 > 0) {\\n                result = (result * 0x1000000000000000B) >> 64;\\n            }\\n            if (x & 0x8 > 0) {\\n                result = (result * 0x10000000000000006) >> 64;\\n            }\\n            if (x & 0x4 > 0) {\\n                result = (result * 0x10000000000000003) >> 64;\\n            }\\n            if (x & 0x2 > 0) {\\n                result = (result * 0x10000000000000001) >> 64;\\n            }\\n            if (x & 0x1 > 0) {\\n                result = (result * 0x10000000000000001) >> 64;\\n            }\\n\\n            // We're doing two things at the same time:\\n            //\\n            //   1. Multiply the result by 2^n + 1, where \\\"2^n\\\" is the integer part and the one is added to account for\\n            //      the fact that we initially set the result to 0.5. This is accomplished by subtracting from 191\\n            //      rather than 192.\\n            //   2. Convert the result to the unsigned 60.18-decimal fixed-point format.\\n            //\\n            // This works because 2^(191-ip) = 2^ip / 2^191, where \\\"ip\\\" is the integer part \\\"2^n\\\".\\n            result *= SCALE;\\n            result >>= (191 - (x >> 64));\\n        }\\n    }\\n\\n    /// @notice Finds the zero-based index of the first one in the binary representation of x.\\n    /// @dev See the note on msb in the \\\"Find First Set\\\" Wikipedia article https://en.wikipedia.org/wiki/Find_first_set\\n    /// @param x The uint256 number for which to find the index of the most significant bit.\\n    /// @return msb The index of the most significant bit as an uint256.\\n    function mostSignificantBit(uint256 x) internal pure returns (uint256 msb) {\\n        if (x >= 2**128) {\\n            x >>= 128;\\n            msb += 128;\\n        }\\n        if (x >= 2**64) {\\n            x >>= 64;\\n            msb += 64;\\n        }\\n        if (x >= 2**32) {\\n            x >>= 32;\\n            msb += 32;\\n        }\\n        if (x >= 2**16) {\\n            x >>= 16;\\n            msb += 16;\\n        }\\n        if (x >= 2**8) {\\n            x >>= 8;\\n            msb += 8;\\n        }\\n        if (x >= 2**4) {\\n            x >>= 4;\\n            msb += 4;\\n        }\\n        if (x >= 2**2) {\\n            x >>= 2;\\n            msb += 2;\\n        }\\n        if (x >= 2**1) {\\n            // No need to shift x any more.\\n            msb += 1;\\n        }\\n    }\\n\\n    /// @notice Calculates floor(x*y\\u00f7denominator) with full precision.\\n    ///\\n    /// @dev Credit to Remco Bloemen under MIT license https://xn--2-umb.com/21/muldiv.\\n    ///\\n    /// Requirements:\\n    /// - The denominator cannot be zero.\\n    /// - The result must fit within uint256.\\n    ///\\n    /// Caveats:\\n    /// - This function does not work with fixed-point numbers.\\n    ///\\n    /// @param x The multiplicand as an uint256.\\n    /// @param y The multiplier as an uint256.\\n    /// @param denominator The divisor as an uint256.\\n    /// @return result The result as an uint256.\\n    function mulDiv(\\n        uint256 x,\\n        uint256 y,\\n        uint256 denominator\\n    ) internal pure returns (uint256 result) {\\n        // 512-bit multiply [prod1 prod0] = x * y. Compute the product mod 2^256 and mod 2^256 - 1, then use\\n        // use the Chinese Remainder Theorem to reconstruct the 512 bit result. The result is stored in two 256\\n        // variables such that product = prod1 * 2^256 + prod0.\\n        uint256 prod0; // Least significant 256 bits of the product\\n        uint256 prod1; // Most significant 256 bits of the product\\n        assembly {\\n            let mm := mulmod(x, y, not(0))\\n            prod0 := mul(x, y)\\n            prod1 := sub(sub(mm, prod0), lt(mm, prod0))\\n        }\\n\\n        // Handle non-overflow cases, 256 by 256 division.\\n        if (prod1 == 0) {\\n            unchecked {\\n                result = prod0 / denominator;\\n            }\\n            return result;\\n        }\\n\\n        // Make sure the result is less than 2^256. Also prevents denominator == 0.\\n        if (prod1 >= denominator) {\\n            revert PRBMath__MulDivOverflow(prod1, denominator);\\n        }\\n\\n        ///////////////////////////////////////////////\\n        // 512 by 256 division.\\n        ///////////////////////////////////////////////\\n\\n        // Make division exact by subtracting the remainder from [prod1 prod0].\\n        uint256 remainder;\\n        assembly {\\n            // Compute remainder using mulmod.\\n            remainder := mulmod(x, y, denominator)\\n\\n            // Subtract 256 bit number from 512 bit number.\\n            prod1 := sub(prod1, gt(remainder, prod0))\\n            prod0 := sub(prod0, remainder)\\n        }\\n\\n        // Factor powers of two out of denominator and compute largest power of two divisor of denominator. Always >= 1.\\n        // See https://cs.stackexchange.com/q/138556/92363.\\n        unchecked {\\n            // Does not overflow because the denominator cannot be zero at this stage in the function.\\n            uint256 lpotdod = denominator & (~denominator + 1);\\n            assembly {\\n                // Divide denominator by lpotdod.\\n                denominator := div(denominator, lpotdod)\\n\\n                // Divide [prod1 prod0] by lpotdod.\\n                prod0 := div(prod0, lpotdod)\\n\\n                // Flip lpotdod such that it is 2^256 / lpotdod. If lpotdod is zero, then it becomes one.\\n                lpotdod := add(div(sub(0, lpotdod), lpotdod), 1)\\n            }\\n\\n            // Shift in bits from prod1 into prod0.\\n            prod0 |= prod1 * lpotdod;\\n\\n            // Invert denominator mod 2^256. Now that denominator is an odd number, it has an inverse modulo 2^256 such\\n            // that denominator * inv = 1 mod 2^256. Compute the inverse by starting with a seed that is correct for\\n            // four bits. That is, denominator * inv = 1 mod 2^4.\\n            uint256 inverse = (3 * denominator) ^ 2;\\n\\n            // Use the Newton-Raphson iteration to improve the precision. Thanks to Hensel's lifting lemma, this also works\\n            // in modular arithmetic, doubling the correct bits in each step.\\n            inverse *= 2 - denominator * inverse; // inverse mod 2^8\\n            inverse *= 2 - denominator * inverse; // inverse mod 2^16\\n            inverse *= 2 - denominator * inverse; // inverse mod 2^32\\n            inverse *= 2 - denominator * inverse; // inverse mod 2^64\\n            inverse *= 2 - denominator * inverse; // inverse mod 2^128\\n            inverse *= 2 - denominator * inverse; // inverse mod 2^256\\n\\n            // Because the division is now exact we can divide by multiplying with the modular inverse of denominator.\\n            // This will give us the correct result modulo 2^256. Since the preconditions guarantee that the outcome is\\n            // less than 2^256, this is the final result. We don't need to compute the high bits of the result and prod1\\n            // is no longer required.\\n            result = prod0 * inverse;\\n            return result;\\n        }\\n    }\\n\\n    /// @notice Calculates floor(x*y\\u00f71e18) with full precision.\\n    ///\\n    /// @dev Variant of \\\"mulDiv\\\" with constant folding, i.e. in which the denominator is always 1e18. Before returning the\\n    /// final result, we add 1 if (x * y) % SCALE >= HALF_SCALE. Without this, 6.6e-19 would be truncated to 0 instead of\\n    /// being rounded to 1e-18.  See \\\"Listing 6\\\" and text above it at https://accu.org/index.php/journals/1717.\\n    ///\\n    /// Requirements:\\n    /// - The result must fit within uint256.\\n    ///\\n    /// Caveats:\\n    /// - The body is purposely left uncommented; see the NatSpec comments in \\\"PRBMath.mulDiv\\\" to understand how this works.\\n    /// - It is assumed that the result can never be type(uint256).max when x and y solve the following two equations:\\n    ///     1. x * y = type(uint256).max * SCALE\\n    ///     2. (x * y) % SCALE >= SCALE / 2\\n    ///\\n    /// @param x The multiplicand as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y The multiplier as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point number.\\n    function mulDivFixedPoint(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        uint256 prod0;\\n        uint256 prod1;\\n        assembly {\\n            let mm := mulmod(x, y, not(0))\\n            prod0 := mul(x, y)\\n            prod1 := sub(sub(mm, prod0), lt(mm, prod0))\\n        }\\n\\n        if (prod1 >= SCALE) {\\n            revert PRBMath__MulDivFixedPointOverflow(prod1);\\n        }\\n\\n        uint256 remainder;\\n        uint256 roundUpUnit;\\n        assembly {\\n            remainder := mulmod(x, y, SCALE)\\n            roundUpUnit := gt(remainder, 499999999999999999)\\n        }\\n\\n        if (prod1 == 0) {\\n            unchecked {\\n                result = (prod0 / SCALE) + roundUpUnit;\\n                return result;\\n            }\\n        }\\n\\n        assembly {\\n            result := add(\\n                mul(\\n                    or(\\n                        div(sub(prod0, remainder), SCALE_LPOTD),\\n                        mul(sub(prod1, gt(remainder, prod0)), add(div(sub(0, SCALE_LPOTD), SCALE_LPOTD), 1))\\n                    ),\\n                    SCALE_INVERSE\\n                ),\\n                roundUpUnit\\n            )\\n        }\\n    }\\n\\n    /// @notice Calculates floor(x*y\\u00f7denominator) with full precision.\\n    ///\\n    /// @dev An extension of \\\"mulDiv\\\" for signed numbers. Works by computing the signs and the absolute values separately.\\n    ///\\n    /// Requirements:\\n    /// - None of the inputs can be type(int256).min.\\n    /// - The result must fit within int256.\\n    ///\\n    /// @param x The multiplicand as an int256.\\n    /// @param y The multiplier as an int256.\\n    /// @param denominator The divisor as an int256.\\n    /// @return result The result as an int256.\\n    function mulDivSigned(\\n        int256 x,\\n        int256 y,\\n        int256 denominator\\n    ) internal pure returns (int256 result) {\\n        if (x == type(int256).min || y == type(int256).min || denominator == type(int256).min) {\\n            revert PRBMath__MulDivSignedInputTooSmall();\\n        }\\n\\n        // Get hold of the absolute values of x, y and the denominator.\\n        uint256 ax;\\n        uint256 ay;\\n        uint256 ad;\\n        unchecked {\\n            ax = x < 0 ? uint256(-x) : uint256(x);\\n            ay = y < 0 ? uint256(-y) : uint256(y);\\n            ad = denominator < 0 ? uint256(-denominator) : uint256(denominator);\\n        }\\n\\n        // Compute the absolute value of (x*y)\\u00f7denominator. The result must fit within int256.\\n        uint256 rAbs = mulDiv(ax, ay, ad);\\n        if (rAbs > uint256(type(int256).max)) {\\n            revert PRBMath__MulDivSignedOverflow(rAbs);\\n        }\\n\\n        // Get the signs of x, y and the denominator.\\n        uint256 sx;\\n        uint256 sy;\\n        uint256 sd;\\n        assembly {\\n            sx := sgt(x, sub(0, 1))\\n            sy := sgt(y, sub(0, 1))\\n            sd := sgt(denominator, sub(0, 1))\\n        }\\n\\n        // XOR over sx, sy and sd. This is checking whether there are one or three negative signs in the inputs.\\n        // If yes, the result should be negative.\\n        result = sx ^ sy ^ sd == 0 ? -int256(rAbs) : int256(rAbs);\\n    }\\n\\n    /// @notice Calculates the square root of x, rounding down.\\n    /// @dev Uses the Babylonian method https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method.\\n    ///\\n    /// Caveats:\\n    /// - This function does not work with fixed-point numbers.\\n    ///\\n    /// @param x The uint256 number for which to calculate the square root.\\n    /// @return result The result as an uint256.\\n    function sqrt(uint256 x) internal pure returns (uint256 result) {\\n        if (x == 0) {\\n            return 0;\\n        }\\n\\n        // Set the initial guess to the least power of two that is greater than or equal to sqrt(x).\\n        uint256 xAux = uint256(x);\\n        result = 1;\\n        if (xAux >= 0x100000000000000000000000000000000) {\\n            xAux >>= 128;\\n            result <<= 64;\\n        }\\n        if (xAux >= 0x10000000000000000) {\\n            xAux >>= 64;\\n            result <<= 32;\\n        }\\n        if (xAux >= 0x100000000) {\\n            xAux >>= 32;\\n            result <<= 16;\\n        }\\n        if (xAux >= 0x10000) {\\n            xAux >>= 16;\\n            result <<= 8;\\n        }\\n        if (xAux >= 0x100) {\\n            xAux >>= 8;\\n            result <<= 4;\\n        }\\n        if (xAux >= 0x10) {\\n            xAux >>= 4;\\n            result <<= 2;\\n        }\\n        if (xAux >= 0x8) {\\n            result <<= 1;\\n        }\\n\\n        // The operations can never overflow because the result is max 2^127 when it enters this block.\\n        unchecked {\\n            result = (result + x / result) >> 1;\\n            result = (result + x / result) >> 1;\\n            result = (result + x / result) >> 1;\\n            result = (result + x / result) >> 1;\\n            result = (result + x / result) >> 1;\\n            result = (result + x / result) >> 1;\\n            result = (result + x / result) >> 1; // Seven iterations should be enough\\n            uint256 roundedDownResult = x / result;\\n            return result >= roundedDownResult ? roundedDownResult : result;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xed164c95012964f5e125b5d2b2d00471a4bdee4def618cd1fcf341d196011b61\",\"license\":\"Unlicense\"},\"prb-math/contracts/PRBMathUD60x18.sol\":{\"content\":\"// SPDX-License-Identifier: Unlicense\\npragma solidity >=0.8.4;\\n\\nimport \\\"./PRBMath.sol\\\";\\n\\n/// @title PRBMathUD60x18\\n/// @author Paul Razvan Berg\\n/// @notice Smart contract library for advanced fixed-point math that works with uint256 numbers considered to have 18\\n/// trailing decimals. We call this number representation unsigned 60.18-decimal fixed-point, since there can be up to 60\\n/// digits in the integer part and up to 18 decimals in the fractional part. The numbers are bound by the minimum and the\\n/// maximum values permitted by the Solidity type uint256.\\nlibrary PRBMathUD60x18 {\\n    /// @dev Half the SCALE number.\\n    uint256 internal constant HALF_SCALE = 5e17;\\n\\n    /// @dev log2(e) as an unsigned 60.18-decimal fixed-point number.\\n    uint256 internal constant LOG2_E = 1_442695040888963407;\\n\\n    /// @dev The maximum value an unsigned 60.18-decimal fixed-point number can have.\\n    uint256 internal constant MAX_UD60x18 =\\n        115792089237316195423570985008687907853269984665640564039457_584007913129639935;\\n\\n    /// @dev The maximum whole value an unsigned 60.18-decimal fixed-point number can have.\\n    uint256 internal constant MAX_WHOLE_UD60x18 =\\n        115792089237316195423570985008687907853269984665640564039457_000000000000000000;\\n\\n    /// @dev How many trailing decimals can be represented.\\n    uint256 internal constant SCALE = 1e18;\\n\\n    /// @notice Calculates the arithmetic average of x and y, rounding down.\\n    /// @param x The first operand as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y The second operand as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result The arithmetic average as an unsigned 60.18-decimal fixed-point number.\\n    function avg(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        // The operations can never overflow.\\n        unchecked {\\n            // The last operand checks if both x and y are odd and if that is the case, we add 1 to the result. We need\\n            // to do this because if both numbers are odd, the 0.5 remainder gets truncated twice.\\n            result = (x >> 1) + (y >> 1) + (x & y & 1);\\n        }\\n    }\\n\\n    /// @notice Yields the least unsigned 60.18 decimal fixed-point number greater than or equal to x.\\n    ///\\n    /// @dev Optimized for fractional value inputs, because for every whole value there are (1e18 - 1) fractional counterparts.\\n    /// See https://en.wikipedia.org/wiki/Floor_and_ceiling_functions.\\n    ///\\n    /// Requirements:\\n    /// - x must be less than or equal to MAX_WHOLE_UD60x18.\\n    ///\\n    /// @param x The unsigned 60.18-decimal fixed-point number to ceil.\\n    /// @param result The least integer greater than or equal to x, as an unsigned 60.18-decimal fixed-point number.\\n    function ceil(uint256 x) internal pure returns (uint256 result) {\\n        if (x > MAX_WHOLE_UD60x18) {\\n            revert PRBMathUD60x18__CeilOverflow(x);\\n        }\\n        assembly {\\n            // Equivalent to \\\"x % SCALE\\\" but faster.\\n            let remainder := mod(x, SCALE)\\n\\n            // Equivalent to \\\"SCALE - remainder\\\" but faster.\\n            let delta := sub(SCALE, remainder)\\n\\n            // Equivalent to \\\"x + delta * (remainder > 0 ? 1 : 0)\\\" but faster.\\n            result := add(x, mul(delta, gt(remainder, 0)))\\n        }\\n    }\\n\\n    /// @notice Divides two unsigned 60.18-decimal fixed-point numbers, returning a new unsigned 60.18-decimal fixed-point number.\\n    ///\\n    /// @dev Uses mulDiv to enable overflow-safe multiplication and division.\\n    ///\\n    /// Requirements:\\n    /// - The denominator cannot be zero.\\n    ///\\n    /// @param x The numerator as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y The denominator as an unsigned 60.18-decimal fixed-point number.\\n    /// @param result The quotient as an unsigned 60.18-decimal fixed-point number.\\n    function div(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        result = PRBMath.mulDiv(x, SCALE, y);\\n    }\\n\\n    /// @notice Returns Euler's number as an unsigned 60.18-decimal fixed-point number.\\n    /// @dev See https://en.wikipedia.org/wiki/E_(mathematical_constant).\\n    function e() internal pure returns (uint256 result) {\\n        result = 2_718281828459045235;\\n    }\\n\\n    /// @notice Calculates the natural exponent of x.\\n    ///\\n    /// @dev Based on the insight that e^x = 2^(x * log2(e)).\\n    ///\\n    /// Requirements:\\n    /// - All from \\\"log2\\\".\\n    /// - x must be less than 133.084258667509499441.\\n    ///\\n    /// @param x The exponent as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point number.\\n    function exp(uint256 x) internal pure returns (uint256 result) {\\n        // Without this check, the value passed to \\\"exp2\\\" would be greater than 192.\\n        if (x >= 133_084258667509499441) {\\n            revert PRBMathUD60x18__ExpInputTooBig(x);\\n        }\\n\\n        // Do the fixed-point multiplication inline to save gas.\\n        unchecked {\\n            uint256 doubleScaleProduct = x * LOG2_E;\\n            result = exp2((doubleScaleProduct + HALF_SCALE) / SCALE);\\n        }\\n    }\\n\\n    /// @notice Calculates the binary exponent of x using the binary fraction method.\\n    ///\\n    /// @dev See https://ethereum.stackexchange.com/q/79903/24693.\\n    ///\\n    /// Requirements:\\n    /// - x must be 192 or less.\\n    /// - The result must fit within MAX_UD60x18.\\n    ///\\n    /// @param x The exponent as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point number.\\n    function exp2(uint256 x) internal pure returns (uint256 result) {\\n        // 2^192 doesn't fit within the 192.64-bit format used internally in this function.\\n        if (x >= 192e18) {\\n            revert PRBMathUD60x18__Exp2InputTooBig(x);\\n        }\\n\\n        unchecked {\\n            // Convert x to the 192.64-bit fixed-point format.\\n            uint256 x192x64 = (x << 64) / SCALE;\\n\\n            // Pass x to the PRBMath.exp2 function, which uses the 192.64-bit fixed-point number representation.\\n            result = PRBMath.exp2(x192x64);\\n        }\\n    }\\n\\n    /// @notice Yields the greatest unsigned 60.18 decimal fixed-point number less than or equal to x.\\n    /// @dev Optimized for fractional value inputs, because for every whole value there are (1e18 - 1) fractional counterparts.\\n    /// See https://en.wikipedia.org/wiki/Floor_and_ceiling_functions.\\n    /// @param x The unsigned 60.18-decimal fixed-point number to floor.\\n    /// @param result The greatest integer less than or equal to x, as an unsigned 60.18-decimal fixed-point number.\\n    function floor(uint256 x) internal pure returns (uint256 result) {\\n        assembly {\\n            // Equivalent to \\\"x % SCALE\\\" but faster.\\n            let remainder := mod(x, SCALE)\\n\\n            // Equivalent to \\\"x - remainder * (remainder > 0 ? 1 : 0)\\\" but faster.\\n            result := sub(x, mul(remainder, gt(remainder, 0)))\\n        }\\n    }\\n\\n    /// @notice Yields the excess beyond the floor of x.\\n    /// @dev Based on the odd function definition https://en.wikipedia.org/wiki/Fractional_part.\\n    /// @param x The unsigned 60.18-decimal fixed-point number to get the fractional part of.\\n    /// @param result The fractional part of x as an unsigned 60.18-decimal fixed-point number.\\n    function frac(uint256 x) internal pure returns (uint256 result) {\\n        assembly {\\n            result := mod(x, SCALE)\\n        }\\n    }\\n\\n    /// @notice Converts a number from basic integer form to unsigned 60.18-decimal fixed-point representation.\\n    ///\\n    /// @dev Requirements:\\n    /// - x must be less than or equal to MAX_UD60x18 divided by SCALE.\\n    ///\\n    /// @param x The basic integer to convert.\\n    /// @param result The same number in unsigned 60.18-decimal fixed-point representation.\\n    function fromUint(uint256 x) internal pure returns (uint256 result) {\\n        unchecked {\\n            if (x > MAX_UD60x18 / SCALE) {\\n                revert PRBMathUD60x18__FromUintOverflow(x);\\n            }\\n            result = x * SCALE;\\n        }\\n    }\\n\\n    /// @notice Calculates geometric mean of x and y, i.e. sqrt(x * y), rounding down.\\n    ///\\n    /// @dev Requirements:\\n    /// - x * y must fit within MAX_UD60x18, lest it overflows.\\n    ///\\n    /// @param x The first operand as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y The second operand as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point number.\\n    function gm(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        if (x == 0) {\\n            return 0;\\n        }\\n\\n        unchecked {\\n            // Checking for overflow this way is faster than letting Solidity do it.\\n            uint256 xy = x * y;\\n            if (xy / x != y) {\\n                revert PRBMathUD60x18__GmOverflow(x, y);\\n            }\\n\\n            // We don't need to multiply by the SCALE here because the x*y product had already picked up a factor of SCALE\\n            // during multiplication. See the comments within the \\\"sqrt\\\" function.\\n            result = PRBMath.sqrt(xy);\\n        }\\n    }\\n\\n    /// @notice Calculates 1 / x, rounding toward zero.\\n    ///\\n    /// @dev Requirements:\\n    /// - x cannot be zero.\\n    ///\\n    /// @param x The unsigned 60.18-decimal fixed-point number for which to calculate the inverse.\\n    /// @return result The inverse as an unsigned 60.18-decimal fixed-point number.\\n    function inv(uint256 x) internal pure returns (uint256 result) {\\n        unchecked {\\n            // 1e36 is SCALE * SCALE.\\n            result = 1e36 / x;\\n        }\\n    }\\n\\n    /// @notice Calculates the natural logarithm of x.\\n    ///\\n    /// @dev Based on the insight that ln(x) = log2(x) / log2(e).\\n    ///\\n    /// Requirements:\\n    /// - All from \\\"log2\\\".\\n    ///\\n    /// Caveats:\\n    /// - All from \\\"log2\\\".\\n    /// - This doesn't return exactly 1 for 2.718281828459045235, for that we would need more fine-grained precision.\\n    ///\\n    /// @param x The unsigned 60.18-decimal fixed-point number for which to calculate the natural logarithm.\\n    /// @return result The natural logarithm as an unsigned 60.18-decimal fixed-point number.\\n    function ln(uint256 x) internal pure returns (uint256 result) {\\n        // Do the fixed-point multiplication inline to save gas. This is overflow-safe because the maximum value that log2(x)\\n        // can return is 196205294292027477728.\\n        unchecked {\\n            result = (log2(x) * SCALE) / LOG2_E;\\n        }\\n    }\\n\\n    /// @notice Calculates the common logarithm of x.\\n    ///\\n    /// @dev First checks if x is an exact power of ten and it stops if yes. If it's not, calculates the common\\n    /// logarithm based on the insight that log10(x) = log2(x) / log2(10).\\n    ///\\n    /// Requirements:\\n    /// - All from \\\"log2\\\".\\n    ///\\n    /// Caveats:\\n    /// - All from \\\"log2\\\".\\n    ///\\n    /// @param x The unsigned 60.18-decimal fixed-point number for which to calculate the common logarithm.\\n    /// @return result The common logarithm as an unsigned 60.18-decimal fixed-point number.\\n    function log10(uint256 x) internal pure returns (uint256 result) {\\n        if (x < SCALE) {\\n            revert PRBMathUD60x18__LogInputTooSmall(x);\\n        }\\n\\n        // Note that the \\\"mul\\\" in this block is the assembly multiplication operation, not the \\\"mul\\\" function defined\\n        // in this contract.\\n        // prettier-ignore\\n        assembly {\\n            switch x\\n            case 1 { result := mul(SCALE, sub(0, 18)) }\\n            case 10 { result := mul(SCALE, sub(1, 18)) }\\n            case 100 { result := mul(SCALE, sub(2, 18)) }\\n            case 1000 { result := mul(SCALE, sub(3, 18)) }\\n            case 10000 { result := mul(SCALE, sub(4, 18)) }\\n            case 100000 { result := mul(SCALE, sub(5, 18)) }\\n            case 1000000 { result := mul(SCALE, sub(6, 18)) }\\n            case 10000000 { result := mul(SCALE, sub(7, 18)) }\\n            case 100000000 { result := mul(SCALE, sub(8, 18)) }\\n            case 1000000000 { result := mul(SCALE, sub(9, 18)) }\\n            case 10000000000 { result := mul(SCALE, sub(10, 18)) }\\n            case 100000000000 { result := mul(SCALE, sub(11, 18)) }\\n            case 1000000000000 { result := mul(SCALE, sub(12, 18)) }\\n            case 10000000000000 { result := mul(SCALE, sub(13, 18)) }\\n            case 100000000000000 { result := mul(SCALE, sub(14, 18)) }\\n            case 1000000000000000 { result := mul(SCALE, sub(15, 18)) }\\n            case 10000000000000000 { result := mul(SCALE, sub(16, 18)) }\\n            case 100000000000000000 { result := mul(SCALE, sub(17, 18)) }\\n            case 1000000000000000000 { result := 0 }\\n            case 10000000000000000000 { result := SCALE }\\n            case 100000000000000000000 { result := mul(SCALE, 2) }\\n            case 1000000000000000000000 { result := mul(SCALE, 3) }\\n            case 10000000000000000000000 { result := mul(SCALE, 4) }\\n            case 100000000000000000000000 { result := mul(SCALE, 5) }\\n            case 1000000000000000000000000 { result := mul(SCALE, 6) }\\n            case 10000000000000000000000000 { result := mul(SCALE, 7) }\\n            case 100000000000000000000000000 { result := mul(SCALE, 8) }\\n            case 1000000000000000000000000000 { result := mul(SCALE, 9) }\\n            case 10000000000000000000000000000 { result := mul(SCALE, 10) }\\n            case 100000000000000000000000000000 { result := mul(SCALE, 11) }\\n            case 1000000000000000000000000000000 { result := mul(SCALE, 12) }\\n            case 10000000000000000000000000000000 { result := mul(SCALE, 13) }\\n            case 100000000000000000000000000000000 { result := mul(SCALE, 14) }\\n            case 1000000000000000000000000000000000 { result := mul(SCALE, 15) }\\n            case 10000000000000000000000000000000000 { result := mul(SCALE, 16) }\\n            case 100000000000000000000000000000000000 { result := mul(SCALE, 17) }\\n            case 1000000000000000000000000000000000000 { result := mul(SCALE, 18) }\\n            case 10000000000000000000000000000000000000 { result := mul(SCALE, 19) }\\n            case 100000000000000000000000000000000000000 { result := mul(SCALE, 20) }\\n            case 1000000000000000000000000000000000000000 { result := mul(SCALE, 21) }\\n            case 10000000000000000000000000000000000000000 { result := mul(SCALE, 22) }\\n            case 100000000000000000000000000000000000000000 { result := mul(SCALE, 23) }\\n            case 1000000000000000000000000000000000000000000 { result := mul(SCALE, 24) }\\n            case 10000000000000000000000000000000000000000000 { result := mul(SCALE, 25) }\\n            case 100000000000000000000000000000000000000000000 { result := mul(SCALE, 26) }\\n            case 1000000000000000000000000000000000000000000000 { result := mul(SCALE, 27) }\\n            case 10000000000000000000000000000000000000000000000 { result := mul(SCALE, 28) }\\n            case 100000000000000000000000000000000000000000000000 { result := mul(SCALE, 29) }\\n            case 1000000000000000000000000000000000000000000000000 { result := mul(SCALE, 30) }\\n            case 10000000000000000000000000000000000000000000000000 { result := mul(SCALE, 31) }\\n            case 100000000000000000000000000000000000000000000000000 { result := mul(SCALE, 32) }\\n            case 1000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 33) }\\n            case 10000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 34) }\\n            case 100000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 35) }\\n            case 1000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 36) }\\n            case 10000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 37) }\\n            case 100000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 38) }\\n            case 1000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 39) }\\n            case 10000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 40) }\\n            case 100000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 41) }\\n            case 1000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 42) }\\n            case 10000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 43) }\\n            case 100000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 44) }\\n            case 1000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 45) }\\n            case 10000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 46) }\\n            case 100000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 47) }\\n            case 1000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 48) }\\n            case 10000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 49) }\\n            case 100000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 50) }\\n            case 1000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 51) }\\n            case 10000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 52) }\\n            case 100000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 53) }\\n            case 1000000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 54) }\\n            case 10000000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 55) }\\n            case 100000000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 56) }\\n            case 1000000000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 57) }\\n            case 10000000000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 58) }\\n            case 100000000000000000000000000000000000000000000000000000000000000000000000000000 { result := mul(SCALE, 59) }\\n            default {\\n                result := MAX_UD60x18\\n            }\\n        }\\n\\n        if (result == MAX_UD60x18) {\\n            // Do the fixed-point division inline to save gas. The denominator is log2(10).\\n            unchecked {\\n                result = (log2(x) * SCALE) / 3_321928094887362347;\\n            }\\n        }\\n    }\\n\\n    /// @notice Calculates the binary logarithm of x.\\n    ///\\n    /// @dev Based on the iterative approximation algorithm.\\n    /// https://en.wikipedia.org/wiki/Binary_logarithm#Iterative_approximation\\n    ///\\n    /// Requirements:\\n    /// - x must be greater than or equal to SCALE, otherwise the result would be negative.\\n    ///\\n    /// Caveats:\\n    /// - The results are nor perfectly accurate to the last decimal, due to the lossy precision of the iterative approximation.\\n    ///\\n    /// @param x The unsigned 60.18-decimal fixed-point number for which to calculate the binary logarithm.\\n    /// @return result The binary logarithm as an unsigned 60.18-decimal fixed-point number.\\n    function log2(uint256 x) internal pure returns (uint256 result) {\\n        if (x < SCALE) {\\n            revert PRBMathUD60x18__LogInputTooSmall(x);\\n        }\\n        unchecked {\\n            // Calculate the integer part of the logarithm and add it to the result and finally calculate y = x * 2^(-n).\\n            uint256 n = PRBMath.mostSignificantBit(x / SCALE);\\n\\n            // The integer part of the logarithm as an unsigned 60.18-decimal fixed-point number. The operation can't overflow\\n            // because n is maximum 255 and SCALE is 1e18.\\n            result = n * SCALE;\\n\\n            // This is y = x * 2^(-n).\\n            uint256 y = x >> n;\\n\\n            // If y = 1, the fractional part is zero.\\n            if (y == SCALE) {\\n                return result;\\n            }\\n\\n            // Calculate the fractional part via the iterative approximation.\\n            // The \\\"delta >>= 1\\\" part is equivalent to \\\"delta /= 2\\\", but shifting bits is faster.\\n            for (uint256 delta = HALF_SCALE; delta > 0; delta >>= 1) {\\n                y = (y * y) / SCALE;\\n\\n                // Is y^2 > 2 and so in the range [2,4)?\\n                if (y >= 2 * SCALE) {\\n                    // Add the 2^(-m) factor to the logarithm.\\n                    result += delta;\\n\\n                    // Corresponds to z/2 on Wikipedia.\\n                    y >>= 1;\\n                }\\n            }\\n        }\\n    }\\n\\n    /// @notice Multiplies two unsigned 60.18-decimal fixed-point numbers together, returning a new unsigned 60.18-decimal\\n    /// fixed-point number.\\n    /// @dev See the documentation for the \\\"PRBMath.mulDivFixedPoint\\\" function.\\n    /// @param x The multiplicand as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y The multiplier as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result The product as an unsigned 60.18-decimal fixed-point number.\\n    function mul(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        result = PRBMath.mulDivFixedPoint(x, y);\\n    }\\n\\n    /// @notice Returns PI as an unsigned 60.18-decimal fixed-point number.\\n    function pi() internal pure returns (uint256 result) {\\n        result = 3_141592653589793238;\\n    }\\n\\n    /// @notice Raises x to the power of y.\\n    ///\\n    /// @dev Based on the insight that x^y = 2^(log2(x) * y).\\n    ///\\n    /// Requirements:\\n    /// - All from \\\"exp2\\\", \\\"log2\\\" and \\\"mul\\\".\\n    ///\\n    /// Caveats:\\n    /// - All from \\\"exp2\\\", \\\"log2\\\" and \\\"mul\\\".\\n    /// - Assumes 0^0 is 1.\\n    ///\\n    /// @param x Number to raise to given power y, as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y Exponent to raise x to, as an unsigned 60.18-decimal fixed-point number.\\n    /// @return result x raised to power y, as an unsigned 60.18-decimal fixed-point number.\\n    function pow(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        if (x == 0) {\\n            result = y == 0 ? SCALE : uint256(0);\\n        } else {\\n            result = exp2(mul(log2(x), y));\\n        }\\n    }\\n\\n    /// @notice Raises x (unsigned 60.18-decimal fixed-point number) to the power of y (basic unsigned integer) using the\\n    /// famous algorithm \\\"exponentiation by squaring\\\".\\n    ///\\n    /// @dev See https://en.wikipedia.org/wiki/Exponentiation_by_squaring\\n    ///\\n    /// Requirements:\\n    /// - The result must fit within MAX_UD60x18.\\n    ///\\n    /// Caveats:\\n    /// - All from \\\"mul\\\".\\n    /// - Assumes 0^0 is 1.\\n    ///\\n    /// @param x The base as an unsigned 60.18-decimal fixed-point number.\\n    /// @param y The exponent as an uint256.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point number.\\n    function powu(uint256 x, uint256 y) internal pure returns (uint256 result) {\\n        // Calculate the first iteration of the loop in advance.\\n        result = y & 1 > 0 ? x : SCALE;\\n\\n        // Equivalent to \\\"for(y /= 2; y > 0; y /= 2)\\\" but faster.\\n        for (y >>= 1; y > 0; y >>= 1) {\\n            x = PRBMath.mulDivFixedPoint(x, x);\\n\\n            // Equivalent to \\\"y % 2 == 1\\\" but faster.\\n            if (y & 1 > 0) {\\n                result = PRBMath.mulDivFixedPoint(result, x);\\n            }\\n        }\\n    }\\n\\n    /// @notice Returns 1 as an unsigned 60.18-decimal fixed-point number.\\n    function scale() internal pure returns (uint256 result) {\\n        result = SCALE;\\n    }\\n\\n    /// @notice Calculates the square root of x, rounding down.\\n    /// @dev Uses the Babylonian method https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method.\\n    ///\\n    /// Requirements:\\n    /// - x must be less than MAX_UD60x18 / SCALE.\\n    ///\\n    /// @param x The unsigned 60.18-decimal fixed-point number for which to calculate the square root.\\n    /// @return result The result as an unsigned 60.18-decimal fixed-point .\\n    function sqrt(uint256 x) internal pure returns (uint256 result) {\\n        unchecked {\\n            if (x > MAX_UD60x18 / SCALE) {\\n                revert PRBMathUD60x18__SqrtOverflow(x);\\n            }\\n            // Multiply x by the SCALE to account for the factor of SCALE that is picked up when multiplying two unsigned\\n            // 60.18-decimal fixed-point numbers together (in this case, those two numbers are both the square root).\\n            result = PRBMath.sqrt(x * SCALE);\\n        }\\n    }\\n\\n    /// @notice Converts a unsigned 60.18-decimal fixed-point number to basic integer form, rounding down in the process.\\n    /// @param x The unsigned 60.18-decimal fixed-point number to convert.\\n    /// @return result The same number in basic integer form.\\n    function toUint(uint256 x) internal pure returns (uint256 result) {\\n        unchecked {\\n            result = x / SCALE;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x2180489de7680a79844dd5ef145f800e4f68e515e0e89409242f0187dbbd657b\",\"license\":\"Unlicense\"}},\"version\":1}",
+  "bytecode": "0x60806040526146506001553480156200001757600080fd5b50604051620019ca380380620019ca83398181016040528101906200003d91906200009d565b80806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505062000122565b600081519050620000978162000108565b92915050565b600060208284031215620000b657620000b562000103565b5b6000620000c68482850162000086565b91505092915050565b6000620000dc82620000e3565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600080fd5b6200011381620000cf565b81146200011f57600080fd5b50565b61189880620001326000396000f3fe6080604052600436106100a75760003560e01c8063741bef1a11610064578063741bef1a146101ce57806385e93261146101f95780638bfa676914610236578063943fbd251461025257806398d5fdca1461027d578063deee63d3146102a8576100a7565b8063047abed7146100ac5780632ae0cac5146100e95780634d6e3f1f14610114578063598e65d51461013f57806359fb49f91461016a5780635f03ac27146101b2575b600080fd5b3480156100b857600080fd5b506100d360048036038101906100ce9190610f31565b6102e5565b6040516100e09190611262565b60405180910390f35b3480156100f557600080fd5b506100fe61031f565b60405161010b9190611262565b60405180910390f35b34801561012057600080fd5b5061012961032c565b6040516101369190611262565b60405180910390f35b34801561014b57600080fd5b50610154610339565b6040516101619190611262565b60405180910390f35b34801561017657600080fd5b50610191600480360381019061018c9190610f31565b610346565b6040516101a99c9b9a99989796959493929190611161565b60405180910390f35b6101cc60048036038101906101c79190610f31565b610492565b005b3480156101da57600080fd5b506101e3610698565b6040516101f09190611146565b60405180910390f35b34801561020557600080fd5b50610220600480360381019061021b9190610f31565b6106bc565b60405161022d9190611262565b60405180910390f35b610250600480360381019061024b9190610e88565b610710565b005b34801561025e57600080fd5b50610267610a10565b6040516102749190611262565b60405180910390f35b34801561028957600080fd5b50610292610a1d565b60405161029f9190611262565b60405180910390f35b3480156102b457600080fd5b506102cf60048036038101906102ca9190610f5e565b610adb565b6040516102dc9190611262565b60405180910390f35b6000806102f0610a1d565b90506000670de0b6b3a7640000848361030991906114c1565b6103139190611379565b90508092505050919050565b6801158e460913d0000081565b68056bc75e2d6310000081565b6801a055690d9db8000081565b6003818154811061035657600080fd5b906000526020600020906008020160009150905080600001805461037990611641565b80601f01602080910402602001604051908101604052809291908181526020018280546103a590611641565b80156103f25780601f106103c7576101008083540402835291602001916103f2565b820191906000526020600020905b8154815290600101906020018083116103d557829003601f168201915b5050505050908060010154908060020154908060030154908060040154908060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060050160149054906101000a900460ff16908060050160159054906101000a900460ff16908060050160169054906101000a900460ff16908060050160179054906101000a900460ff1690806006015490806007015490508c565b6000600382815481106104a8576104a7611731565b5b906000526020600020906008020190508060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461054a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161054190611242565b60405180910390fd5b60008160050160149054906101000a900460ff166105e257600382600401541115801561057b575060008260040154115b156105965761058f600a8360070154610adb565b90506105dd565b60038260040154111580156105af575060058260040154115b156105ca576105c360148360070154610adb565b90506105dc565b6105d960288360070154610adb565b90505b5b6105ea565b816007015490505b8034101561062d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161062490611222565b60405180910390fd5b6000600c83600301546106409190611323565b9050610650818460010154610b13565b8360020181905550808360030181905550600183600401546106729190611323565b836004018190555034836007015461068a9190611323565b836007018190555050505050565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806106c960016102e5565b905060006106e0670de0b6b3a76400008084610bf6565b90506000670de0b6b3a7640000826106f89190611379565b9050848161070691906114c1565b9350505050919050565b600068056bc75e2d631000009050831561073c576801a055690d9db80000816107399190611323565b90505b821561075a576801158e460913d00000816107579190611323565b90505b8115610778576801158e460913d00000816107759190611323565b90505b60006107848688610b13565b905081610790346102e5565b116107d257346040517f5da6aa6f0000000000000000000000000000000000000000000000000000000081526004016107c99190611262565b60405180910390fd5b60006040518061018001604052808a8152602001898152602001838152602001888152602001600181526020013373ffffffffffffffffffffffffffffffffffffffff168152602001600015158152602001871515815260200186151581526020018515158152602001600254815260200134815250905060038190806001815401808255809150506001900390600052602060002090600802016000909190919091506000820151816000019080519060200190610892929190610d0c565b506020820151816001015560408201518160020155606082015181600301556080820151816004015560a08201518160050160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060c08201518160050160146101000a81548160ff02191690831515021790555060e08201518160050160156101000a81548160ff0219169083151502179055506101008201518160050160166101000a81548160ff0219169083151502179055506101208201518160050160176101000a81548160ff0219169083151502179055506101408201518160060155610160820151816007015550506001600260008282546109af9190611323565b9250508190555081878a6040516109c69190611114565b60405180910390207f107cc50ba7367b376b2cbc5feec57f9feef39e48fffc2c7385fccaa1b7fd5071336040516109fd919061112b565b60405180910390a4505050505050505050565b6801158e460913d0000081565b60008060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b158015610a8657600080fd5b505afa158015610a9a573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610abe9190610f9e565b5050509150506402540be40081610ad591906113aa565b91505090565b6000808284610aea91906114c1565b90506000606482610afb9190611379565b90508084610b09919061151b565b9250505092915050565b600060068311158015610b27575060008310155b15610b3e57610b37600583610adb565b9050610bf0565b600c8311158015610b50575060068310155b15610b6757610b60600f83610adb565b9050610bf0565b60188311158015610b795750600c8310155b15610b9057610b89601483610adb565b9050610bf0565b60248311158015610ba2575060188310155b15610bb957610bb2601e83610adb565b9050610bf0565b60308311158015610bcb575060248310155b15610be257610bdb602883610adb565b9050610bf0565b610bed603283610adb565b90505b92915050565b600080600080198587098587029250828110838203039150506000811415610c3257838281610c2857610c276116d3565b5b0492505050610d05565b838110610c785780846040517f773cc18c000000000000000000000000000000000000000000000000000000008152600401610c6f92919061127d565b60405180910390fd5b60008486880990508281118203915080830392506000600186190186169050808604955080840493506001818260000304019050808302841793506000600287600302189050808702600203810290508087026002038102905080870260020381029050808702600203810290508087026002038102905080870260020381029050808502955050505050505b9392505050565b828054610d1890611641565b90600052602060002090601f016020900481019282610d3a5760008555610d81565b82601f10610d5357805160ff1916838001178555610d81565b82800160010185558215610d81579182015b82811115610d80578251825591602001919060010190610d65565b5b509050610d8e9190610d92565b5090565b5b80821115610dab576000816000905550600101610d93565b5090565b6000610dc2610dbd846112cb565b6112a6565b905082815260208101848484011115610dde57610ddd611794565b5b610de98482856115ff565b509392505050565b600081359050610e0081611806565b92915050565b600081519050610e158161181d565b92915050565b600082601f830112610e3057610e2f61178f565b5b8135610e40848260208601610daf565b91505092915050565b600081359050610e5881611834565b92915050565b600081519050610e6d81611834565b92915050565b600081519050610e828161184b565b92915050565b60008060008060008060c08789031215610ea557610ea461179e565b5b600087013567ffffffffffffffff811115610ec357610ec2611799565b5b610ecf89828a01610e1b565b9650506020610ee089828a01610e49565b9550506040610ef189828a01610e49565b9450506060610f0289828a01610df1565b9350506080610f1389828a01610df1565b92505060a0610f2489828a01610df1565b9150509295509295509295565b600060208284031215610f4757610f4661179e565b5b6000610f5584828501610e49565b91505092915050565b60008060408385031215610f7557610f7461179e565b5b6000610f8385828601610e49565b9250506020610f9485828601610e49565b9150509250929050565b600080600080600060a08688031215610fba57610fb961179e565b5b6000610fc888828901610e73565b9550506020610fd988828901610e06565b9450506040610fea88828901610e5e565b9350506060610ffb88828901610e5e565b925050608061100c88828901610e73565b9150509295509295909350565b61102281611561565b82525050565b6110318161154f565b82525050565b61104081611573565b82525050565b61104f816115c9565b82525050565b6000611060826112fc565b61106a8185611307565b935061107a81856020860161160e565b611083816117a3565b840191505092915050565b6000611099826112fc565b6110a38185611318565b93506110b381856020860161160e565b80840191505092915050565b60006110cc600183611307565b91506110d7826117b4565b602082019050919050565b60006110ef601183611307565b91506110fa826117dd565b602082019050919050565b61110e816115a9565b82525050565b6000611120828461108e565b915081905092915050565b60006020820190506111406000830184611028565b92915050565b600060208201905061115b6000830184611046565b92915050565b600061018082019050818103600083015261117c818f611055565b905061118b602083018e611105565b611198604083018d611105565b6111a5606083018c611105565b6111b2608083018b611105565b6111bf60a083018a611019565b6111cc60c0830189611037565b6111d960e0830188611037565b6111e7610100830187611037565b6111f5610120830186611037565b611203610140830185611105565b611211610160830184611105565b9d9c50505050505050505050505050565b6000602082019050818103600083015261123b816110bf565b9050919050565b6000602082019050818103600083015261125b816110e2565b9050919050565b60006020820190506112776000830184611105565b92915050565b60006040820190506112926000830185611105565b61129f6020830184611105565b9392505050565b60006112b06112c1565b90506112bc8282611673565b919050565b6000604051905090565b600067ffffffffffffffff8211156112e6576112e5611760565b5b6112ef826117a3565b9050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600081905092915050565b600061132e826115a9565b9150611339836115a9565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561136e5761136d6116a4565b5b828201905092915050565b6000611384826115a9565b915061138f836115a9565b92508261139f5761139e6116d3565b5b828204905092915050565b60006113b58261157f565b91506113c08361157f565b9250827f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04821160008413600084131616156113ff576113fe6116a4565b5b817f8000000000000000000000000000000000000000000000000000000000000000058312600084126000841316161561143c5761143b6116a4565b5b827f80000000000000000000000000000000000000000000000000000000000000000582126000841360008412161615611479576114786116a4565b5b827f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff05821260008412600084121616156114b6576114b56116a4565b5b828202905092915050565b60006114cc826115a9565b91506114d7836115a9565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156115105761150f6116a4565b5b828202905092915050565b6000611526826115a9565b9150611531836115a9565b925082821015611544576115436116a4565b5b828203905092915050565b600061155a82611589565b9050919050565b600061156c82611589565b9050919050565b60008115159050919050565b6000819050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600069ffffffffffffffffffff82169050919050565b60006115d4826115db565b9050919050565b60006115e6826115ed565b9050919050565b60006115f882611589565b9050919050565b82818337600083830152505050565b60005b8381101561162c578082015181840152602081019050611611565b8381111561163b576000848401525b50505050565b6000600282049050600182168061165957607f821691505b6020821081141561166d5761166c611702565b5b50919050565b61167c826117a3565b810181811067ffffffffffffffff8211171561169b5761169a611760565b5b80604052505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f6f00000000000000000000000000000000000000000000000000000000000000600082015250565b7f596f7520617265206e6f74204f776e6572000000000000000000000000000000600082015250565b61180f81611573565b811461181a57600080fd5b50565b6118268161157f565b811461183157600080fd5b50565b61183d816115a9565b811461184857600080fd5b50565b611854816115b3565b811461185f57600080fd5b5056fea264697066735822122068a52bdc0b313461e7570f6b12ab4be251a3d1f9e49c3befdef5fd1baa570b5264736f6c63430008070033",
+  "deployedBytecode": "0x6080604052600436106100a75760003560e01c8063741bef1a11610064578063741bef1a146101ce57806385e93261146101f95780638bfa676914610236578063943fbd251461025257806398d5fdca1461027d578063deee63d3146102a8576100a7565b8063047abed7146100ac5780632ae0cac5146100e95780634d6e3f1f14610114578063598e65d51461013f57806359fb49f91461016a5780635f03ac27146101b2575b600080fd5b3480156100b857600080fd5b506100d360048036038101906100ce9190610f31565b6102e5565b6040516100e09190611262565b60405180910390f35b3480156100f557600080fd5b506100fe61031f565b60405161010b9190611262565b60405180910390f35b34801561012057600080fd5b5061012961032c565b6040516101369190611262565b60405180910390f35b34801561014b57600080fd5b50610154610339565b6040516101619190611262565b60405180910390f35b34801561017657600080fd5b50610191600480360381019061018c9190610f31565b610346565b6040516101a99c9b9a99989796959493929190611161565b60405180910390f35b6101cc60048036038101906101c79190610f31565b610492565b005b3480156101da57600080fd5b506101e3610698565b6040516101f09190611146565b60405180910390f35b34801561020557600080fd5b50610220600480360381019061021b9190610f31565b6106bc565b60405161022d9190611262565b60405180910390f35b610250600480360381019061024b9190610e88565b610710565b005b34801561025e57600080fd5b50610267610a10565b6040516102749190611262565b60405180910390f35b34801561028957600080fd5b50610292610a1d565b60405161029f9190611262565b60405180910390f35b3480156102b457600080fd5b506102cf60048036038101906102ca9190610f5e565b610adb565b6040516102dc9190611262565b60405180910390f35b6000806102f0610a1d565b90506000670de0b6b3a7640000848361030991906114c1565b6103139190611379565b90508092505050919050565b6801158e460913d0000081565b68056bc75e2d6310000081565b6801a055690d9db8000081565b6003818154811061035657600080fd5b906000526020600020906008020160009150905080600001805461037990611641565b80601f01602080910402602001604051908101604052809291908181526020018280546103a590611641565b80156103f25780601f106103c7576101008083540402835291602001916103f2565b820191906000526020600020905b8154815290600101906020018083116103d557829003601f168201915b5050505050908060010154908060020154908060030154908060040154908060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060050160149054906101000a900460ff16908060050160159054906101000a900460ff16908060050160169054906101000a900460ff16908060050160179054906101000a900460ff1690806006015490806007015490508c565b6000600382815481106104a8576104a7611731565b5b906000526020600020906008020190508060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461054a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161054190611242565b60405180910390fd5b60008160050160149054906101000a900460ff166105e257600382600401541115801561057b575060008260040154115b156105965761058f600a8360070154610adb565b90506105dd565b60038260040154111580156105af575060058260040154115b156105ca576105c360148360070154610adb565b90506105dc565b6105d960288360070154610adb565b90505b5b6105ea565b816007015490505b8034101561062d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161062490611222565b60405180910390fd5b6000600c83600301546106409190611323565b9050610650818460010154610b13565b8360020181905550808360030181905550600183600401546106729190611323565b836004018190555034836007015461068a9190611323565b836007018190555050505050565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806106c960016102e5565b905060006106e0670de0b6b3a76400008084610bf6565b90506000670de0b6b3a7640000826106f89190611379565b9050848161070691906114c1565b9350505050919050565b600068056bc75e2d631000009050831561073c576801a055690d9db80000816107399190611323565b90505b821561075a576801158e460913d00000816107579190611323565b90505b8115610778576801158e460913d00000816107759190611323565b90505b60006107848688610b13565b905081610790346102e5565b116107d257346040517f5da6aa6f0000000000000000000000000000000000000000000000000000000081526004016107c99190611262565b60405180910390fd5b60006040518061018001604052808a8152602001898152602001838152602001888152602001600181526020013373ffffffffffffffffffffffffffffffffffffffff168152602001600015158152602001871515815260200186151581526020018515158152602001600254815260200134815250905060038190806001815401808255809150506001900390600052602060002090600802016000909190919091506000820151816000019080519060200190610892929190610d0c565b506020820151816001015560408201518160020155606082015181600301556080820151816004015560a08201518160050160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060c08201518160050160146101000a81548160ff02191690831515021790555060e08201518160050160156101000a81548160ff0219169083151502179055506101008201518160050160166101000a81548160ff0219169083151502179055506101208201518160050160176101000a81548160ff0219169083151502179055506101408201518160060155610160820151816007015550506001600260008282546109af9190611323565b9250508190555081878a6040516109c69190611114565b60405180910390207f107cc50ba7367b376b2cbc5feec57f9feef39e48fffc2c7385fccaa1b7fd5071336040516109fd919061112b565b60405180910390a4505050505050505050565b6801158e460913d0000081565b60008060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b158015610a8657600080fd5b505afa158015610a9a573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610abe9190610f9e565b5050509150506402540be40081610ad591906113aa565b91505090565b6000808284610aea91906114c1565b90506000606482610afb9190611379565b90508084610b09919061151b565b9250505092915050565b600060068311158015610b27575060008310155b15610b3e57610b37600583610adb565b9050610bf0565b600c8311158015610b50575060068310155b15610b6757610b60600f83610adb565b9050610bf0565b60188311158015610b795750600c8310155b15610b9057610b89601483610adb565b9050610bf0565b60248311158015610ba2575060188310155b15610bb957610bb2601e83610adb565b9050610bf0565b60308311158015610bcb575060248310155b15610be257610bdb602883610adb565b9050610bf0565b610bed603283610adb565b90505b92915050565b600080600080198587098587029250828110838203039150506000811415610c3257838281610c2857610c276116d3565b5b0492505050610d05565b838110610c785780846040517f773cc18c000000000000000000000000000000000000000000000000000000008152600401610c6f92919061127d565b60405180910390fd5b60008486880990508281118203915080830392506000600186190186169050808604955080840493506001818260000304019050808302841793506000600287600302189050808702600203810290508087026002038102905080870260020381029050808702600203810290508087026002038102905080870260020381029050808502955050505050505b9392505050565b828054610d1890611641565b90600052602060002090601f016020900481019282610d3a5760008555610d81565b82601f10610d5357805160ff1916838001178555610d81565b82800160010185558215610d81579182015b82811115610d80578251825591602001919060010190610d65565b5b509050610d8e9190610d92565b5090565b5b80821115610dab576000816000905550600101610d93565b5090565b6000610dc2610dbd846112cb565b6112a6565b905082815260208101848484011115610dde57610ddd611794565b5b610de98482856115ff565b509392505050565b600081359050610e0081611806565b92915050565b600081519050610e158161181d565b92915050565b600082601f830112610e3057610e2f61178f565b5b8135610e40848260208601610daf565b91505092915050565b600081359050610e5881611834565b92915050565b600081519050610e6d81611834565b92915050565b600081519050610e828161184b565b92915050565b60008060008060008060c08789031215610ea557610ea461179e565b5b600087013567ffffffffffffffff811115610ec357610ec2611799565b5b610ecf89828a01610e1b565b9650506020610ee089828a01610e49565b9550506040610ef189828a01610e49565b9450506060610f0289828a01610df1565b9350506080610f1389828a01610df1565b92505060a0610f2489828a01610df1565b9150509295509295509295565b600060208284031215610f4757610f4661179e565b5b6000610f5584828501610e49565b91505092915050565b60008060408385031215610f7557610f7461179e565b5b6000610f8385828601610e49565b9250506020610f9485828601610e49565b9150509250929050565b600080600080600060a08688031215610fba57610fb961179e565b5b6000610fc888828901610e73565b9550506020610fd988828901610e06565b9450506040610fea88828901610e5e565b9350506060610ffb88828901610e5e565b925050608061100c88828901610e73565b9150509295509295909350565b61102281611561565b82525050565b6110318161154f565b82525050565b61104081611573565b82525050565b61104f816115c9565b82525050565b6000611060826112fc565b61106a8185611307565b935061107a81856020860161160e565b611083816117a3565b840191505092915050565b6000611099826112fc565b6110a38185611318565b93506110b381856020860161160e565b80840191505092915050565b60006110cc600183611307565b91506110d7826117b4565b602082019050919050565b60006110ef601183611307565b91506110fa826117dd565b602082019050919050565b61110e816115a9565b82525050565b6000611120828461108e565b915081905092915050565b60006020820190506111406000830184611028565b92915050565b600060208201905061115b6000830184611046565b92915050565b600061018082019050818103600083015261117c818f611055565b905061118b602083018e611105565b611198604083018d611105565b6111a5606083018c611105565b6111b2608083018b611105565b6111bf60a083018a611019565b6111cc60c0830189611037565b6111d960e0830188611037565b6111e7610100830187611037565b6111f5610120830186611037565b611203610140830185611105565b611211610160830184611105565b9d9c50505050505050505050505050565b6000602082019050818103600083015261123b816110bf565b9050919050565b6000602082019050818103600083015261125b816110e2565b9050919050565b60006020820190506112776000830184611105565b92915050565b60006040820190506112926000830185611105565b61129f6020830184611105565b9392505050565b60006112b06112c1565b90506112bc8282611673565b919050565b6000604051905090565b600067ffffffffffffffff8211156112e6576112e5611760565b5b6112ef826117a3565b9050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600081905092915050565b600061132e826115a9565b9150611339836115a9565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0382111561136e5761136d6116a4565b5b828201905092915050565b6000611384826115a9565b915061138f836115a9565b92508261139f5761139e6116d3565b5b828204905092915050565b60006113b58261157f565b91506113c08361157f565b9250827f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04821160008413600084131616156113ff576113fe6116a4565b5b817f8000000000000000000000000000000000000000000000000000000000000000058312600084126000841316161561143c5761143b6116a4565b5b827f80000000000000000000000000000000000000000000000000000000000000000582126000841360008412161615611479576114786116a4565b5b827f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff05821260008412600084121616156114b6576114b56116a4565b5b828202905092915050565b60006114cc826115a9565b91506114d7836115a9565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156115105761150f6116a4565b5b828202905092915050565b6000611526826115a9565b9150611531836115a9565b925082821015611544576115436116a4565b5b828203905092915050565b600061155a82611589565b9050919050565b600061156c82611589565b9050919050565b60008115159050919050565b6000819050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600069ffffffffffffffffffff82169050919050565b60006115d4826115db565b9050919050565b60006115e6826115ed565b9050919050565b60006115f882611589565b9050919050565b82818337600083830152505050565b60005b8381101561162c578082015181840152602081019050611611565b8381111561163b576000848401525b50505050565b6000600282049050600182168061165957607f821691505b6020821081141561166d5761166c611702565b5b50919050565b61167c826117a3565b810181811067ffffffffffffffff8211171561169b5761169a611760565b5b80604052505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f6f00000000000000000000000000000000000000000000000000000000000000600082015250565b7f596f7520617265206e6f74204f776e6572000000000000000000000000000000600082015250565b61180f81611573565b811461181a57600080fd5b50565b6118268161157f565b811461183157600080fd5b50565b61183d816115a9565b811461184857600080fd5b50565b611854816115b3565b811461185f57600080fd5b5056fea264697066735822122068a52bdc0b313461e7570f6b12ab4be251a3d1f9e49c3befdef5fd1baa570b5264736f6c63430008070033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "PRBMath__MulDivOverflow(uint256,uint256)": [
+        {
+          "notice": "Emitted when the result overflows uint256."
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 111,
+        "contract": "contracts/EverInsurance.sol:EverInsurance",
+        "label": "priceFeed",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(AggregatorV3Interface)45"
+      },
+      {
+        "astId": 118,
+        "contract": "contracts/EverInsurance.sol:EverInsurance",
+        "label": "MinUsd",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 216,
+        "contract": "contracts/EverInsurance.sol:EverInsurance",
+        "label": "counter",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 245,
+        "contract": "contracts/EverInsurance.sol:EverInsurance",
+        "label": "insurances",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_array(t_struct(insurance)241_storage)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address_payable": {
+        "encoding": "inplace",
+        "label": "address payable",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(insurance)241_storage)dyn_storage": {
+        "base": "t_struct(insurance)241_storage",
+        "encoding": "dynamic_array",
+        "label": "struct EverInsurance.insurance[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_contract(AggregatorV3Interface)45": {
+        "encoding": "inplace",
+        "label": "contract AggregatorV3Interface",
+        "numberOfBytes": "20"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(insurance)241_storage": {
+        "encoding": "inplace",
+        "label": "struct EverInsurance.insurance",
+        "members": [
+          {
+            "astId": 218,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "products",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 220,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "ex_ShowRoomPrice",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 222,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "idv",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 224,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "howOld",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 226,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "whatInsuranceisThis",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 228,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "owner",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_address_payable"
+          },
+          {
+            "astId": 230,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "isclaimed",
+            "offset": 20,
+            "slot": "5",
+            "type": "t_bool"
+          },
+          {
+            "astId": 232,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "zeroDeprication",
+            "offset": 21,
+            "slot": "5",
+            "type": "t_bool"
+          },
+          {
+            "astId": 234,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "engineCover",
+            "offset": 22,
+            "slot": "5",
+            "type": "t_bool"
+          },
+          {
+            "astId": 236,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "keyLoss",
+            "offset": 23,
+            "slot": "5",
+            "type": "t_bool"
+          },
+          {
+            "astId": 238,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "insuranceID",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 240,
+            "contract": "contracts/EverInsurance.sol:EverInsurance",
+            "label": "totalAmountPaid",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
